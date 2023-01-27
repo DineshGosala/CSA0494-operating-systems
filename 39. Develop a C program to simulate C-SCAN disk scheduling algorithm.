@@ -19,7 +19,6 @@ int main() {
     for(i=0; i<q_size; i++)
         scanf("%d", &queue[i]);
 
-    // sort queue in ascending order
     for(i=0; i<q_size; i++) {
         for(j=i+1; j<q_size; j++) {
             if(queue[i] > queue[j]) {
@@ -30,7 +29,6 @@ int main() {
         }
     }
 
-    // find head position in queue
     for(i=0; i<q_size; i++) {
         if(head == queue[i]) {
             diff = i;
@@ -38,7 +36,6 @@ int main() {
         }
     }
 
-    // seek calculation
     for(i=diff; i>=0; i--) {
         seek += abs(head - queue[i]);
         head = queue[i];
